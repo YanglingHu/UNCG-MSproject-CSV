@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block content %}
+    <html>
+    <body>
+
+    <h1>CSV Processor-test page</h1>
+    <div class="row">
+  <div class="col-4">
+    <div class="list-group" id="list-tab" role="tablist">
+        <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-view" role="tab" aria-controls="list-home">View</a>
+        <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-cal" role="tab" aria-controls="list-profile">Calculate</a>
+        <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-pie" role="tab" aria-controls="list-messages">Charts</a>
+        <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-col" role="tab" aria-controls="list-settings">Add new column</a>
+        <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-split" role="tab" aria-controls="list-settings">Split csv files</a>
+        <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-group" role="tab" aria-controls="list-settings">group csv files</a>
+        <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-sort" role="tab" aria-controls="list-settings">Sort csv files</a>
+
+
+    </div>
+  </div>
+  <div class="col-8">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="list-view" role="tabpanel" aria-labelledby="list-home-list">
+          <a>Upload csv file to view in all the data</a>
+        <form class="" action="data" method="post">
+        <input class="form-control" type="file" name="csvfile" value="">
+         <input class="btn btn-secondary" type="submit" name="" value="View">
+
+</form>
+      </div>
+      <div class="tab-pane fade" id="list-cal" role="tabpanel" aria-labelledby="list-profile-list">
+          <a>Test calculate function</a>
+        <form class="" action="mean" method="post">
+        <input class="form-control" type="file" name="csvfile" value="">
+            <a>Input which column name need to be calculate:</a>
+            <input class="" type="input" name="targetcol">
+        <input class="btn btn-secondary" type="submit" name="" value="Calculate">
+        </form>
+      </div>
+      <div class="tab-pane fade" id="list-pie" role="tabpanel" aria-labelledby="list-messages-list">
+          <a>Test pie chart function</a>
+        <form class="" action="piechart" method="post">
+        <input class="form-control" type="file" name="csvfile" value="">
+        <input class="btn btn-secondary" type="submit" name="" value="Pie chart">
+        </form>
+      </div>
+      <div class="tab-pane fade" id="list-col" role="tabpanel" aria-labelledby="list-settings-list">
+      <a>Test Add new column function</a>
+        <form class="" action="Add_col" method="post">
+        <input class="form-control" type="file" name="csvfile" value="">
+            <a>Input new Column name:</a>
+            <input class="" type="input" name="colname">
+            <br>
+            <a>Input data for this column:</a>
+            <input class="" type="input" name="dvalue">
+            <br>
+        <input class="btn btn-secondary" type="submit" name="" value="Add col">
+        </form>
+    </div>
+        <div class="tab-pane fade" id="list-split" role="tabpanel" aria-labelledby="list-messages-list">
+          <a>Test split csv file as percentage function</a>
+        <form class="" action="split" method="post">
+        <input class="form-control" type="file" name="csvfile" value="">
+            <a>Input the percentage for split: </a>
+            <input class="" type="input" name="pct">
+            <a>%</a>
+            <br>
+            <div class="btn-group" role="group" aria-label="Basic example">
+            <input class="btn btn-secondary" type="submit" name="submit_button" value="Split">
+            <input class="btn btn-secondary" type="submit" name="submit_button" value="Rest">
+            </div>
+        </form>
+            
+</div>
+        <div class="tab-pane fade" id="list-group" role="tabpanel" aria-labelledby="list-messages-list">
+          <a>Test group csv file in column(unfinished)</a>
+        <form class="" action="groups" method="post">
+        <input class="form-control" type="file" name="csvfile" value="">
+        <input class="btn btn-secondary" type="submit" name="" value="Group">
+        </form>
+
+</div>
+        <div class="tab-pane fade" id="list-sort" role="tabpanel" aria-labelledby="list-messages-list">
+          <a>Test sort csv file (unfinished,date only)</a>
+        <form class="" action="sort" method="post">
+        <input class="form-control" type="file" name="csvfile" value="">
+        <input class="btn btn-secondary" type="submit" name="" value="Sort">
+        </form>
+
+</div>
+    </div>
+  </div>
+</div>
+    </body>
+    </html>
+{% endblock %}

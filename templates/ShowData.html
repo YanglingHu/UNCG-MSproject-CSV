@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block content %}
+    <div align="center">
+    <h1>For the result based on the uploaded file:</h1>
+    <table class="table table-secondary" border = 1>
+    {% for key, value in data.items() %}
+
+    <tr>
+       <th> {{ key }} </th>
+       <td> {{ value }} </td>
+    </tr>
+
+    {% endfor %}
+ </table>
+</div>
+{% endblock %}

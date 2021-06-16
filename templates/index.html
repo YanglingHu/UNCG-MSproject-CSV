@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block content %}
+    <html>
+    <body>
+    <h1>Welcome!</h1>
+    <p>For this website, the main goal is to process the csv files and tech you how to use the following three items build a website.</p>
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner" align="center">
+    <div class="carousel-item active">
+      <img src="{{url_for('static', filename='uncg.jpg')}}" alt="UNCG">
+    </div>
+    <div class="carousel-item">
+      <img src="{{url_for('static', filename='petty.jpg')}}" alt="petty">
+    </div>
+    <div class="carousel-item">
+      <img src="ny.jpg" alt="New York">
+    </div>
+  </div>
+<br>
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+    <h6>I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our nation.
+
+Five score years ago, a great American, in whose symbolic shadow we stand today, signed the Emancipation Proclamation. This momentous decree came as a great beacon light of hope to millions of Negro slaves who had been seared in the flames of withering injustice. It came as a joyous daybreak to end the long night of their captivity.
+
+But one hundred years later, the Negro still is not free. One hundred years later, the life of the Negro is still sadly crippled by the manacles of segregation and the chains of discrimination. One hundred years later, the Negro lives on a lonely island of poverty in the midst of a vast ocean of material prosperity. One hundred years later, the Negro is still languished in the corners of American society and finds himself an exile in his own land. And so we've come here today to dramatize a shameful condition.</h6>
+
+    <div align="center">
+    <button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+
+</div>
+
+<br>
+    <br>
+  <!-- 无关 -->
+<div class="row row-cols-1 row-cols-md-3 g-4" align="center">
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{url_for('static', filename='image1.jpeg')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Python</h5>
+        <p class="card-text">This is the main language used in this web develop.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">@copyright by Yangling Hu</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{url_for('static', filename='image2.jpg')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Pandas</h5>
+        <p class="card-text">This is the library mainly used to process the functions and csv processes.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">@copyright by Yangling Hu</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{url_for('static', filename='image3.png')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Flask</h5>
+        <p class="card-text">Flask depends on the Jinja template engine and the Werkzeug WSGI toolkit.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">@copyright by Yangling Hu</small>
+      </div>
+    </div>
+  </div>
+</div>
+    </body>
+    </html>
+
+
+{% endblock %}
